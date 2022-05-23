@@ -15,13 +15,13 @@ class Student:
                 f'Завершенные курсы: {self.finished_courses}\n')
 
     def __eq__(self, other):
-        return Student.average_rate_student(student_1) == Student.average_rate_student(student_2)
+        return self.average_rate_student() == self.average_rate_student()
 
     def __lt__(self, other):
-        return Student.average_rate_student(student_1) < Student.average_rate_student(student_2)
+        return self.average_rate_student() < self.average_rate_student()
 
     def __gt__(self, other):
-        return Student.average_rate_student(student_1) > Student.average_rate_student(student_2)
+        return self.average_rate_student() > self.average_rate_student()
 
     def average_rate_student(self):
         rate_list = []
@@ -61,13 +61,13 @@ class Lecturer(Mentor):
                 f'Средняя оценка за лекции: {self.average_rate_lecturer()}\n')
 
     def __eq__(self, other):
-        return Lecturer.average_rate_lecturer(lecturer_1) == Lecturer.average_rate_lecturer(lecturer_2)
+        return self.average_rate_lecturer() == self.average_rate_lecturer()
 
     def __lt__(self, other):
-        return Lecturer.average_rate_lecturer(lecturer_1) < Lecturer.average_rate_lecturer(lecturer_2)
+        return self.average_rate_lecturer() < self.average_rate_lecturer()
 
     def __gt__(self, other):
-        return Lecturer.average_rate_lecturer(lecturer_1) > Lecturer.average_rate_lecturer(lecturer_2)
+        return self.average_rate_lecturer() > self.average_rate_lecturer()
 
     def average_rate_lecturer(self):
         rate_list = []
